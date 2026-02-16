@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Electric, LLC</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <!-- ============================
+         BANNER
+         ============================ -->
+    <header class="banner">
+        <div class="banner-overlay"></div>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipNb8-iyyrL9CZP5IfT-gE9Ihq2PDyqjehEv7cw=w1200-h600" class="banner-bg">
+
+        <div class="banner-content">
+            <img src="images/codebluelogo.png" class="logo" alt="Code Electric Logo">
+            <h1>Code Electric, LLC</h1>
+        </div>
+    </header>
+
+
+    <!-- ============================
+         NAVIGATION
+         ============================ -->
+    <nav class="topnav">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+        
+        <div class="nav-links">
+            <a onclick="showSection('about')">About</a>
+            <a onclick="showSection('reviews')">Reviews</a>
+            <a onclick="showSection('photos')">Gallery</a>
+            <a onclick="showSection('contact')">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- ============================
+         ABOUT SECTION
+         ============================ -->
+    <section id="about" class="section active">
+        <h2>About Us</h2>
+
+        <p>Code Electric LLC is committed to providing high‑quality electrical services with professionalism, safety, and integrity.</p>
+
+        <p>Code Electric is a reputable electrical services provider based in Raymore, MO. Specializing in both residential and commercial projects, the company offers a wide range of electrical solutions to meet various needs.</p>
+
+        <p>With a team of skilled electricians, Code Electric prides itself on delivering high-quality workmanship and exceptional customer service. Whether it's installations, repairs, or maintenance, the company is dedicated to ensuring safe and reliable electrical systems for its clients.</p>
+    </section>
+
+
+    <!-- ============================
+         REVIEWS SECTION
+         ============================ -->
+    <section id="reviews" class="section">
+        <h2>Customer Reviews</h2>
+
+        <div class="review-carousel">
+            <div class="carousel-track">
+
+                <div class="carousel-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">I hired Code Electric to do several jobs for me...</p>
+                    <p class="review-author">– V6 Property Services (Dan & Dawn Francis)</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">I cannot recommend the Code Electric team enough...</p>
+                    <p class="review-author">– Joel Kraft</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">We have been on the hunt for an electrician...</p>
+                    <p class="review-author">– Krista Watt</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">Billy and his team replaced our outdated panel...</p>
+                    <p class="review-author">– Jeremy Richardson</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">Code Electric was professional and friendly...</p>
+                    <p class="review-author">– Michele Lehman</p>
+                </div>
+
+            </div>
+
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+        </div>
+    </section>
+
+
+    <!-- ============================
+         PHOTO GALLERY
+         ============================ -->
+    <section id="photos" class="section">
+        <h2>Project Photos</h2>
+
+        <div class="photo-grid">
+            <!-- 15 images -->
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOHpZcepyRMAdu5uH40ViiKXUURJWRDB148oIg=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMXZGzVbMEdEjYyhQKjgIoVkLk_YMW3rAEANXU=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOLSEbNoTIPI_X1aZCku2bCJcEnw6-ujEyy1L4=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM-O3d1zEMz0OdmIFZ1VJ7KlMAnfVJ8QUPyLF0=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPeJJYPQwvQtyqnMqXq5WATykVX-feRI9xUbIc=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMkc0chyiOue-zgbdFfyZT951DOoKUBHGvw53c=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOW7-5bAiIOE271-UVR8Gf1O4KWyD_cLKLNuFk=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNsFRk5z7D9MKiTPiyurt4SajBXrharXS4lZjI=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipN1LTHeVBJ9FL0I4hqN-Lw_d_Hzed1383dIk4s=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOhTTfueRfiKIFy5biqq13iMO5gbWsgshzm3bE=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMYVU-Ti07QFGlmpK5nwi3-QFAFrQBQw5o2Y4A=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMv8RQdI1reC4JD08Cyw7LjAT1ZGttVgOaih3E=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOsqa3i-B0r0UdIptllr7yMU_tKPFepX7gAPjg=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNfhwCFQ3rEtDWp0nuXuWf4C1kvn9QJY1958Cw=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM2w3Jqc6c8VmJHSCu4NOi7AgCLxdMoJrntyzM=s1360-w1360-h1020-rw" onclick="openLightbox(this)">
+        </div>
+    </section>
+
+
+    <!-- ============================
+         CONTACT SECTION
+         ============================ -->
+    <section id="contact" class="section" align="center">
+        <h2>Contact Us</h2>
+
+        <p>Email:</p>
+        <p>Phone: (816) 898‑6071</p>
+        <p>Business Hours: Mon–Fri, 8am–5pm</p>
+
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396590.0483057329!2d-94.82038600058415!3d39.05271499436944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0d9c8bb50896d%3A0xd742a8d33be6431e!2sCODE%20ELECTRIC%2C%20LLC!5e0!3m2!1sen!2sus!4v1769870977404!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" loading="lazy">
+        </iframe>
+    </section>
+
+
+    <!-- ============================
+         LIGHTBOX
+         ============================ -->
+    <div id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">×</span>
+        <span class="lightbox-arrow lightbox-prev" onclick="changeImage(-1)">❮</span>
+        <img id="lightbox-img">
+        <div id="lightbox-counter"></div>
+        <button id="shareBtn" class="share-btn">Share</button>
+        <span class="lightbox-arrow lightbox-next" onclick="changeImage(1)">❯</span>
+    </div>
+
+
+    <!-- ============================
+         FOOTER
+         ============================ -->
+    <footer id="footer">
+        <p>Last updated: <span id="lastUpdated"></span></p>
+    </footer>
+
+
+    <!-- ============================
+         SCRIPTS
+         ============================ -->
+
+    <!-- Review Carousel -->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        }
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            updateCarousel();
+        }, 6000);
+    </script>
+
+    <!-- Lightbox JS script-->
+ <script>
+let currentIndex = 0;
+let images = [];
+let isZoomed = false;
+let lastTap = 0;
+let startX = 0, startY = 0;
+let imgX = 0, imgY = 0;
+
+/* Open Lightbox */
+function openLightbox(img) {
+    images = Array.from(document.querySelectorAll('.photo-grid img'));
+    currentIndex = images.indexOf(img);
+
+    updateLightboxImage();
+
+    document.getElementById('lightbox').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+/* Close Lightbox */
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    resetZoom();
+}
+
+/* Update Image + Counter */
+function updateLightboxImage() {
+    const lightboxImg = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+
+    lightboxImg.classList.remove('show');
+    resetZoom();
+
+    setTimeout(() => {
+        lightboxImg.src = images[currentIndex].src;
+        lightboxImg.classList.add('show');
+        counter.textContent = `${currentIndex + 1} of ${images.length}`;
+    }, 50);
+}
+
+/* Change Image */
+function changeImage(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    updateLightboxImage();
+}
+
+/* Click outside to close */
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target.id === 'lightbox') closeLightbox();
+});
+
+/* Keyboard navigation */
+document.addEventListener('keydown', function(e) {
+    const lb = document.getElementById('lightbox');
+    if (lb.style.display !== 'flex') return;
+
+    if (e.key === 'ArrowRight') changeImage(1);
+    if (e.key === 'ArrowLeft') changeImage(-1);
+    if (e.key === 'Escape') closeLightbox();
+});
+
+/* Double-tap to zoom */
+document.getElementById('lightbox-img').addEventListener('touchend', function(e) {
+    const now = Date.now();
+    if (now - lastTap < 300) toggleZoom(e.touches[0]);
+    lastTap = now;
+});
+
+/* Pinch-to-zoom */
+let initialDistance = 0;
+
+document.getElementById('lightbox').addEventListener('touchmove', function(e) {
+    if (e.touches.length === 2) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const distance = Math.sqrt(dx*dx + dy*dy);
+
+        if (!initialDistance) initialDistance = distance;
+
+        if (distance - initialDistance > 30) zoomIn();
+        if (initialDistance - distance > 30) zoomOut();
+    }
+});
+
+document.getElementById('lightbox').addEventListener('touchend', function(e) {
+    if (e.touches.length < 2) initialDistance = 0;
+});
+
+/* Swipe navigation */
+document.getElementById('lightbox').addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) startX = e.touches[0].clientX;
+});
+
+document.getElementById('lightbox').addEventListener('touchend', function(e) {
+    if (e.changedTouches.length === 1) {
+        let diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50 && !isZoomed) {
+            if (diff > 0) changeImage(1);
+            else changeImage(-1);
+        }
+    }
+});
+
+/* Zoom Functions */
+function toggleZoom(touch) {
+    if (isZoomed) zoomOut();
+    else zoomIn();
+}
+
+function zoomIn() {
+    const img = document.getElementById('lightbox-img');
+    img.classList.add('zoomed');
+    isZoomed = true;
+}
+
+function zoomOut() {
+    const img = document.getElementById('lightbox-img');
+    img.classList.remove('zoomed');
+    img.style.transform = '';
+    imgX = imgY = 0;
+    isZoomed = false;
+}
+
+function resetZoom() {
+    zoomOut();
+}
+
+/* Drag to pan when zoomed */
+document.getElementById('lightbox-img').addEventListener('mousedown', startPan);
+document.getElementById('lightbox-img').addEventListener('touchstart', startPan);
+
+function startPan(e) {
+    if (!isZoomed) return;
+
+    e.preventDefault();
+    const img = document.getElementById('lightbox-img');
+
+    let startXPos = e.clientX || e.touches[0].clientX;
+    let startYPos = e.clientY || e.touches[0].clientY;
+
+    function move(ev) {
+        let x = ev.clientX || ev.touches[0].clientX;
+        let y = ev.clientY || ev.touches[0].clientY;
+
+        imgX += (x - startXPos);
+        imgY += (y - startYPos);
+
+        img.style.transform = `scale(2) translate(${imgX}px, ${imgY}px)`;
+
+        startXPos = x;
+        startYPos = y;
+    }
+
+    function stop() {
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', stop);
+        document.removeEventListener('touchmove', move);
+        document.removeEventListener('touchend', stop);
+    }
+
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', stop);
+    document.addEventListener('touchmove', move);
+    document.addEventListener('touchend', stop);
+}
+</script>
+<script>
+const shareBtn = document.getElementById("shareBtn");
+
+shareBtn.addEventListener("click", async () => {
+    const imgSrc = document.getElementById("lightbox-img").src;
+
+    if (navigator.share) {
+        // Native mobile share
+        await navigator.share({
+            title: "Code Electric Project Photo",
+            text: "Check out this project photo from Code Electric!",
+            url: imgSrc
+        });
+    } else {
+        // Fallback: copy link
+        navigator.clipboard.writeText(imgSrc);
+        shareBtn.textContent = "Copied!";
+        setTimeout(() => shareBtn.textContent = "Share", 1500);
+    }
+});
+</script>    
+    <!-- Section Switching -->
+    <script>
+const themeBtn = document.getElementById("themeToggle");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    // Update icon
+    themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+
+    // Save preference
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+});
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    themeBtn.textContent = "☀️";
+}
+</script>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+
+    <!-- Footer Date -->
+    <script>
+        const lastUpdated = new Date(document.lastModified);
+        document.getElementById("lastUpdated").textContent =
+            lastUpdated.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+    </script>
+
+</body>
+</html>
