@@ -1,0 +1,465 @@
+/* ============================================
+   GLOBAL
+   ============================================ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.topnav {
+    background: var(--nav-bg);
+}
+
+.topnav a {
+    color: var(--nav-text);
+}
+
+.review-carousel {
+    background: var(--card-bg);
+}
+
+.banner-overlay {
+    background: var(--overlay);
+}
+/* ============================================
+   THEME VARIABLES
+   ============================================ */
+:root {
+    --bg: #ffffff;
+    --text: #003366;
+    --nav-bg: #003366;
+    --nav-text: #ffffff;
+    --card-bg: #f5f5f5;
+    --overlay: rgba(0,0,0,0.45);
+}
+
+body.dark {
+    --bg: #0d1117;
+    --text: #e6edf3;
+    --nav-bg: #161b22;
+    --nav-text: #e6edf3;
+    --card-bg: #242a33;
+    --overlay: rgba(0,0,0,0.65);
+}
+
+/* ============================================
+   TOP NAVIGATION (DESKTOP DEFAULT)
+   ============================================ */
+.topnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--nav-bg);
+    padding: 12px 0;
+    gap: 25px;
+}
+
+.topnav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Nav links wrapper */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* ============================================
+   BANNER (DESKTOP DEFAULT)
+   ============================================ */
+.banner {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+    text-align: left;
+}
+
+.logo {
+    height: 70px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));
+}
+
+.banner-content h1 {
+    color: var(--text);
+    margin: 0;
+    font-size: 32px;
+    text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* ============================================
+   PHOTO GRID
+   ============================================ */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ============================================
+   REVIEW CAROUSEL
+   ============================================ */
+.review-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    overflow: hidden;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.stars {
+    color: #f4c430;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.review-author {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.carousel-btn:hover {
+    background: #002244;
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lightbox-prev { left: 40px; }
+.lightbox-next { right: 40px; }
+/* Lightbox fade-in */
+#lightbox {
+    animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Image crossfade */
+#lightbox-img {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+#lightbox-img.show {
+    opacity: 1;
+}
+/* Counter styling */
+#lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    background: rgba(0,0,0,0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+/* Zoomed image */
+#lightbox-img.zoomed {
+    transform: scale(2);
+    cursor: grab;
+    transition: transform 0.25s ease;
+}
+/* ============================================
+   SECTIONS
+   ============================================ */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--text);
+    text-align: center;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* ============================================
+   MOBILE (max-width: 600px)
+   ============================================ */
+@media (max-width: 600px) {
+
+    /* NAVIGATION */
+    .topnav {
+        justify-content: space-between;
+        padding: 12px 15px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #003366;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        font-size: 1.1rem;
+    }
+
+    /* BANNER */
+    .banner {
+        height: 260px;
+    }
+
+    .banner-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .banner-content {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .banner-content .logo {
+        height: 55px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+    }
+
+    /* PHOTO GRID */
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* REVIEW CAROUSEL */
+    .review-carousel {
+        padding: 15px 0;
+        margin: 20px auto;
+    }
+
+    .carousel-slide {
+        padding: 15px;
+    }
+
+    .review-text {
+        font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   SMALL PHONES (max-width: 400px)
+   ============================================ */
+@media (max-width: 400px) {
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .banner {
+        height: 230px;
+    }
+
+    .banner-content .logo {
+        height: 48px;
+    }
+
+    .banner-content h1 {
+        font-size: 20px;
+    }
+
+    .photo-grid {
+        gap: 10px;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+    }
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--nav-text);
+    margin-right: 10px;
+}
+.share-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
